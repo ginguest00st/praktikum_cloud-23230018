@@ -1,0 +1,35 @@
+1  ls /etc | head -20
+    2  ls -l /var/log
+    3  tail -5 /etc/passwd
+    4  ls -ld /home /root /tmp
+    5  useradd -m -s /bin/bash mhs12345
+    6  echo "mhs12345:Cloud2026" | chpasswd
+    7  usermod -aG sudo mhs12345
+    8  id mhs12345
+    9  ls -ld /home/mhs12345
+   10  ~useradd -m -s /bin/bash mhs23230018
+   11  useradd -m -s /bin/bash mhs23230018
+   12  echo "mhs23230018:Cloud2026" | chpasswd
+   13  usermod -aG sudo mhs23230018
+   14  id mhs23230018
+   15  ls -ld /home/mhs23230018
+   16  su - mhs23230018
+   17  apt update
+   18  mkdir -p /srv/data
+   19  ecoh "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   20  ech0 "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   21  echo "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   22  chown mhs23230018:mhs23230018 /srv/data/catatan.txt
+   23  chmod 600 /srv/data/catatan.txt
+   24  ls -l /srv/data
+   25  useradd -m tamu
+   26  su - tamu -c "cat /srv/data/catatan.txt
+
+   27  su - tamu -c "cat /srv/data/catatan.txt"
+   28  su - mhs23230018 -c "cat /srv/data/catatan.txt"
+   29  sleep 600 &
+   30  ps aux | grep sleep
+   31  kill <PID>
+   32  ps aux | grep sleep
+   33  top
+   34  history > /root/riwayat-A.txt

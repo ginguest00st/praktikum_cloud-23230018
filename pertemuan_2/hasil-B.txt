@@ -1,0 +1,87 @@
+server {
+    listen 8080;
+    root /var/www/situs2;
+    index index.html;
+}
+    1  ls /etc | head -20
+    2  ls -l /var/log
+    3  tail -5 /etc/passwd
+    4  ls -ld /home /root /tmp
+    5  useradd -m -s /bin/bash mhs12345
+    6  echo "mhs12345:Cloud2026" | chpasswd
+    7  usermod -aG sudo mhs12345
+    8  id mhs12345
+    9  ls -ld /home/mhs12345
+   10  ~useradd -m -s /bin/bash mhs23230018
+   11  useradd -m -s /bin/bash mhs23230018
+   12  echo "mhs23230018:Cloud2026" | chpasswd
+   13  usermod -aG sudo mhs23230018
+   14  id mhs23230018
+   15  ls -ld /home/mhs23230018
+   16  su - mhs23230018
+   17  apt update
+   18  mkdir -p /srv/data
+   19  ecoh "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   20  ech0 "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   21  echo "Catatan rahasia NIM 23230018" > /srv/data/catatan.txt
+   22  chown mhs23230018:mhs23230018 /srv/data/catatan.txt
+   23  chmod 600 /srv/data/catatan.txt
+   24  ls -l /srv/data
+   25  useradd -m tamu
+   26  su - tamu -c "cat /srv/data/catatan.txt
+
+   27  su - tamu -c "cat /srv/data/catatan.txt"
+   28  su - mhs23230018 -c "cat /srv/data/catatan.txt"
+   29  sleep 600 &
+   30  ps aux | grep sleep
+   31  kill <PID>
+   32  ps aux | grep sleep
+   33  top
+   34  history > /root/riwayat-A.txt
+   35  cat /root/riwayat-A.txt
+   36  apt update
+   37  apt install -y nginx
+   38  nginx -v
+   39  systemctl status nginx --no-pager
+   40  curl -l localhost
+   41  cat > /var/www/html/index.html <<'EOF'
+<!DOCTYPE html>
+<html>
+<head><tittle>Server NIM 23230018</title></head>
+<body>
+<h1>Praktikum Cloud Computing UNRIYO</h1>
+<p>Nama: [Rahagi Andhika] - NIM: 23230018</p>
+<p>Server ini berjalan di Ubuntu dengan Nginx.</p>
+</body>
+</html>
+EOF
+
+   42  curl localhost
+   43  echo "<h1>Halaman rahasia</h1>" > /var/www/html/rahasia.html
+   44  echo 600 /var/www/html/rahasia.html
+   45  curl -l localhost/rahasia.html
+   46  curl -l localhost/tidakada.html
+   47  tail -5 /var/log/nginx/access.log
+   48  chown -R www-data:www-data /var/www/html
+   49  chmod -R gtw /var/www/html
+   50  chmod -R g+w /var/www/html
+   51  usermod -aG www-data mhs23230018
+   52  su - mhs 23230018 -c "echo '<h1>Diedit oleh mhs23230018</h1>' > /var/www/html/profil.html"
+   53  ls -l /var/www/html
+   54  curl localhost/profil.html
+   55  mkdir -p /var/www/situs2
+   56  echo "<h1>Situs kedua - NIM 23230018</h1>" > /var/www/situs2/index.html
+   57  cat > /etc/nginx/sites-available/situs2 << 'EOF'
+server {
+    listen 8080;
+    root /var/www/situs2;
+    index index.html;
+}
+EOF
+
+   58  in -s /etc/nginx/sites-available/situs2 /etc/nginx/sites-enabled/situs2
+   59  ln -s /etc/nginx/sites-available/situs2 /etc/nginx/sites-enabled/situs2
+   60  nginx -t
+   61  systemctl reload nginx
+   62  curl localhost:8080
+   63  history > /root/riwayat-B.txt
